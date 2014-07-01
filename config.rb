@@ -53,36 +53,34 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-ready do
-  sprockets.append_path 'vendor'
-end
+sprockets.append_path File.join root, 'vendor'
 
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
+
+  # Enable GZip compression
+  activate :gzip
 
   # Use relative URLs
   # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  ignore '.DS_Store'
 end
 
 # Deploy to S3
-activate :sync do |sync|
-  sync.fog_provider = 'AWS'
-  sync.fog_directory = 'www.derekschaefer.com'
-  sync.fog_region = 'us-east-1'
-  sync.existing_remote_files = 'delete'
-  sync.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
-  sync.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
-
-  Fog.credentials = { path_style: true }
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket = 'www.derekschaefer.com'
+  s3_sync.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
+  s3_sync.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
 end
