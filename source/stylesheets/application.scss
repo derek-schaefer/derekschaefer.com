@@ -1,7 +1,7 @@
 /**
  * Vendor
  *
- * = require bootstrap/dist/css/bootstrap.css
+ *= require bootstrap/dist/css/bootstrap
  */
 
 /**
@@ -26,15 +26,11 @@ a {
 }
 
 .shadow {
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(39,27,36,0.25);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(39,27,36,0.25);
-  box-shadow: 0px 5px 10px 0px rgba(39,27,36,0.25);
+  box-shadow: 0px 5px 10px 0px rgba(39, 27, 36, 0.25);
 }
 
 .border {
   border: 1px solid #CCC;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -46,11 +42,22 @@ a {
     background-color: #fff;
 
     h1 {
+      height: 70px;
       color: #B95D40;
       margin-top: 0;
     }
 
+    h2 {
+      height: 33px;
+    }
+
+    h3 {
+      height: 26px;
+    }
+
     .contact {
+      height: 85px;
+
       .icon {
         display: inline-block;
         margin: 15px 10px;
