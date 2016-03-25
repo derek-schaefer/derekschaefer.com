@@ -1,5 +1,3 @@
-require 'rake'
-
 task :build do
   system 'bundle exec middleman build'
 end

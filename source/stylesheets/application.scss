@@ -30,40 +30,40 @@ a {
 }
 
 .border {
-  border: 1px solid #CCC;
   border-radius: 5px;
+  border: 1px solid #CCC;
 }
 
-.index {
+/**
+ * Pages
+ */
 
-  .jumbotron {
-    margin-top: 50px;
-    text-align: center;
-    background-color: #fff;
+.index .jumbotron {
+  background-color: #fff;
+  margin-top: 50px;
+  text-align: center;
 
-    h1 {
-      height: 70px;
-      color: #B95D40;
+  h1 {
+    color: #B95D40;
       margin-top: 0;
-    }
-
-    h2 {
-      height: 33px;
-    }
-
-    h3 {
-      height: 26px;
-    }
-
-    .contact {
-      height: 85px;
-
-      .icon {
-        display: inline-block;
-        margin: 15px 10px;
-        margin-bottom: 0;
-      }
-    }
+      min-height: 70px;
   }
 
+  h2 {
+    min-height: 33px;
+  }
+
+  h3 {
+    min-height: 26px;
+  }
+
+  .contact {
+    min-height: 85px;
+
+    .icon {
+      display: inline-block;
+      margin-bottom: 0;
+      margin: 15px 10px;
+    }
+  }
 }
