@@ -1,0 +1,38 @@
+html,
+body,
+.main {
+  height: 100%;
+}
+
+body {
+  background-color: teal;
+}
+
+button,
+.title-bar,
+.window {
+  font-family: "MS Sans Serif", Geneva, sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.window {
+  height: fit-content;
+  margin: 2rem;
+
+}
+
+.maximize {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.minimize {
+  .window-body {
+    display: none;
+  }
+}
