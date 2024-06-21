@@ -1,3 +1,3 @@
-# derekschaefer.com
+# DerekSchaefer.com
 
 TODO
